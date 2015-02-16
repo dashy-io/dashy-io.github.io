@@ -27,6 +27,7 @@ a:hover {
     margin: 0 auto;
 }
 .img-step {
+    padding-top: 20px;
     max-width: 350px;
 }
 .pure-g .text-black {
@@ -86,7 +87,7 @@ footer {
   margin-bottom: 25px;
 }
 .dashy-elements {
-    padding: 25px 0;
+    padding: 30px 0;
 }
 .section-involved, footer {
     background-color: #eee;
