@@ -4,6 +4,7 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var deploy = require('gulp-gh-pages');
+var runSequence = require('run-sequence');
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.css')
@@ -51,7 +52,7 @@ gulp.task('extras', function () {
   return gulp.src([
     'app/*.*',
     '!app/*.html',
-    'node_modules/apache-server-configs/dist/.htaccess'
+    'app/CNAME'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
@@ -114,10 +115,14 @@ gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
 
-gulp.task('deploy', function () {
+gulp.task('gh-pages', function () {
     return gulp.src('./dist/**/*.*')
         .pipe(deploy({
           cacheDir: '.tmp/dist/',
           branch: 'master'
         }));
+});
+
+gulp.task('deploy', function() {
+  runSequence('clean','build','gh-pages');
 });
