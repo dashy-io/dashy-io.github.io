@@ -28,7 +28,8 @@ a:hover {
 }
 .img-step {
     padding-top: 20px;
-    max-width: 350px;
+    width: 350px;
+    max-width: 100%;
 }
 .pure-g .text-black {
     color: #555;
@@ -98,14 +99,19 @@ footer {
 .box-text {
     height: 110px;
 }
+.img-dashy-gif {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+}
 .circle-number {
     border: 2px solid #555;
     width: 50px;
     height: 50px;
     margin: 0 auto;
     text-align: center;
-    line-height: 1.6em;
-    font-size: 2em;
+    line-height: 2em;
+    font-size: 1.8em;
     border-radius: 50%;
 }
 
@@ -115,3 +121,46 @@ footer {
 .footer {
   text-align: center;
 }
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?-yepwjk');
+    src:url('../fonts/icomoon.eot?#iefix-yepwjk') format('embedded-opentype'),
+        url('../fonts/icomoon.woff?-yepwjk') format('woff'),
+        url('../fonts/icomoon.ttf?-yepwjk') format('truetype'),
+        url('../fonts/icomoon.svg?-yepwjk#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user-check:before {
+    content: "\e975";
+}
+
+.icon-cog:before {
+    content: "\e994";
+}
+
+.icon-power-cord:before {
+    content: "\e9b7";
+}
+
+.icon-eye:before {
+    content: "\e9ce";
+}
+
+
