@@ -2,17 +2,14 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
     font-family: 'Roboto', sans-serif;
     color: #444;
 }
-a {
+.link, .link-title {
     text-decoration: none;
 }
-a:hover {
+.link:hover {
     text-decoration: underline;
 }
 .link-title {
     color: #1565C0;
-}
-.link-title:hover {
-    text-decoration: none;
 }
 .text-center {
   text-align: center;
@@ -35,10 +32,13 @@ a:hover {
     color: #555;
 }
 .fa-icon-components {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 .lead {
     font-size: 1.45em;
+}
+.component {
+    padding: 15px;
 }
 section {
   background-color: #fff;
