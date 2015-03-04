@@ -2,6 +2,22 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
     font-family: 'Roboto', sans-serif;
     color: #444;
 }
+.menu-dashy {
+    padding: 25px;
+    position: fixed;
+}
+.menu-dashy a {
+    text-transform: uppercase;
+    color: #eee;
+    background-color: rgba(255,255,255,.1);
+}
+.menu-dashy a:hover,
+.menu-dashy a:focus {
+    background-color: rgba(0,0,0,.2);
+}
+.menu-right {
+    float: right;
+}
 .link, .link-title {
     text-decoration: none;
 }
@@ -60,6 +76,7 @@ footer {
     position: fixed !important;
 }
 .img-header {
+    padding-top: 25px;
     height: 120px;
     max-width: 100%;
 }
@@ -73,9 +90,10 @@ footer {
 }
 .title-splash {
     font-size: 4em;
-    margin: 0.3em 0;
+    margin: 0;
 }
 .lead-splash {
+    margin: .2em 0;
     font-size: 1.45em;
     font-weight: 300;
     line-height: 1.5em;
