@@ -33,6 +33,8 @@
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="http://admin.dashy.io" class="pure-menu-link">Management Console</a>
                 </li>
+                <li class="pure-menu-item button-mobile-menu"><a href="#" id="trigger-overlay" class="pure-menu-link">Menu</a>
+                </li>
             </ul>
             <ul class="pure-menu-list menu-right">
                 <li class="pure-menu-item"><a href="http://client.dashy.io" target="_blank" class="pure-menu-link">Create new dashboard</a>
@@ -172,6 +174,25 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <!-- open/close -->
+    <div class="overlay overlay-slidedown">
+        <div class="pure-menu pure-menu-horizontal menu-dashy">
+            <ul class="pure-menu-list menu-right">
+                <li class="pure-menu-item"><a href="http://client.dashy.io" target="_blank" class="pure-menu-link">Create new dashboard</a>
+                </li>
+                <li class="pure-menu-link"><a href="#" class="pure-menu-link overlay-close">X</a></li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Management Console</a>
+                </li>
+                <li><a href="#">Create new dashboard</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
     <!-- build:js scripts/vendor.js -->
