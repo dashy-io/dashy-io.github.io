@@ -5,6 +5,12 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var deploy = require('gulp-gh-pages');
 var runSequence = require('run-sequence');
+var deploySettings = {
+    "root": "dist",
+    "username": process.env.deployUser,
+    "hostname": process.env.deployHost,
+    "destination": process.env.deployDest
+}
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.css')
@@ -123,6 +129,15 @@ gulp.task('gh-pages', function () {
         }));
 });
 
+gulp.task('rsync', function() {
+    return gulp.src('dist/**/*.*')
+        .pipe($.rsync(deploySettings));
+});
+
+gulp.task('deploy:gh-pages', function() {
+    runSequence('clean', 'build', 'gh-pages');
+});
+
 gulp.task('deploy', function() {
-  runSequence('clean','build','gh-pages');
+    runSequence('clean', 'build', 'rsync');
 });
